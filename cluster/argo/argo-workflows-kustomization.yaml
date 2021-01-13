@@ -1,0 +1,15 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  name: argo-workflows
+  namespace: flux-system
+spec:
+  interval: 60m0s
+  path: ./toolchain/argo-workflows
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: cluster-system
+  targetNamespace: argo
+
