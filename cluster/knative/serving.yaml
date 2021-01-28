@@ -5,7 +5,7 @@ metadata:
   namespace: flux
 spec:
   interval: 60m
-  path: ./knative/serving
+  path: ./toolchain/knative/serving
   prune: true
   validation: client
   dependsOn:

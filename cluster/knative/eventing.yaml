@@ -5,7 +5,7 @@ metadata:
   namespace: flux
 spec:
   interval: 5m
-  path: ./knative/eventing
+  path: ./toolchain/knative/eventing
   prune: true
   validation: client
   dependsOn:
