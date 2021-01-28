@@ -3,7 +3,7 @@
 # kind: HelmRelease
 # metadata:
 #   name: seldon-core-analytics
-#   namespace: flux-system
+#   namespace: flux
 # spec:
 #   chart:
 #     spec:
@@ -11,7 +11,7 @@
 #       sourceRef:
 #         kind: HelmRepository
 #         name: seldonio
-#         namespace: flux-system
+#         namespace: flux
 #   interval: 120m0s
 #   targetNamespace: seldon-system
 #   releaseName: seldon-core-analytics

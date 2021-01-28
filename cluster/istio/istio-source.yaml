@@ -3,10 +3,10 @@ apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
   name: istio
-  namespace: flux-system
+  namespace: flux
 spec:
   interval: 60m
   ref:
-    tag: "1.7.6"
+    branch: "release-1.7"
   url: https://github.com/istio/istio
 

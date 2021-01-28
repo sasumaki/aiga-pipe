@@ -3,7 +3,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: seldon-operator
-  namespace: flux-system
+  namespace: flux
 spec:
   chart:
     spec:
@@ -11,7 +11,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: seldonio
-        namespace: flux-system
+        namespace: flux
   interval: 120m0s
   values:
     istio:
