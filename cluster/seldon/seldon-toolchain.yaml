@@ -8,6 +8,8 @@ spec:
   path: ./toolchain/seldon
   prune: true
   validation: client
+  dependsOn:
+    - name: istiod
   sourceRef:
     kind: GitRepository
     name: cluster-system
