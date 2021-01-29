@@ -1,9 +1,13 @@
+install fluxctl
+
+add cluster/infrastructure-sync.yaml
+```
 ---
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
   name: cluster-system
-  namespace: flux-system
+  namespace: flux
 spec:
   interval: 2m0s
   ref:
@@ -14,7 +18,7 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
 metadata:
   name: cluster-system
-  namespace: flux-system
+  namespace: flux
 spec:
   interval: 10m0s
   path: ./cluster
@@ -23,3 +27,4 @@ spec:
     kind: GitRepository
     name: cluster-system
   validation: client
+```
