@@ -8,6 +8,8 @@ spec:
   interval: 500m0s
   path: ./manifests/charts/istio-control/istio-discovery
   prune: true
+  dependsOn:
+    - name: istio-base
   sourceRef:
     kind: GitRepository
     name: istio

@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ./nats-eventing
+  path: ./toolchain/nats-eventing
   prune: true
   sourceRef:
     kind: GitRepository
