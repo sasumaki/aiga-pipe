@@ -44,15 +44,15 @@ spec:
       VolumeName: ""
       accessMode: ReadWriteOnce
       size: 25Gi
-  # valuesFrom:
-  # - kind: Secret
-  #   name: minio-secret
-  #   valuesKey: accessKey
-  #   targetPath: accessKey
-  # - kind: Secret
-  #   name: minio-secret
-  #   valuesKey: secretKey
-  #   targetPath: secretKey
+  valuesFrom:
+  - kind: Secret
+    name: minio-secret
+    valuesKey: accessKey
+    targetPath: accessKey
+  - kind: Secret
+    name: minio-secret
+    valuesKey: secretKey
+    targetPath: secretKey
   targetNamespace: minio
   releaseName: minio
 
